@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import Port from './Port';
+import {BrowserRouter,Outlet,Route,Routes} from "react-router-dom"
+import New from './New';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <BrowserRouter>
+      <Routes>
+<Route path='/' element={<Port/>}/>
+<Route path='/new' element={<New/>}/>
+      </Routes>
+      
+      </BrowserRouter>
+      
     </div>
+
   );
 }
 
